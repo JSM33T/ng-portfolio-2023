@@ -1,9 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { initializeNavbarSticky } from '../../library/invokers/sticky-navbar';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html'
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
+  toggleNavbar() {
+    const navbar = this.el.nativeElement.querySelector('#navbarNav');
+    const navToggler = this.el.nativeElement.querySelector('#navToggler');
+    const isExpanded = navToggler.getAttribute('aria-expanded') === 'true';
+
+    if (isExpanded) {
+      this.renderer.removeClass(navbar, 'show');
+      this.renderer.setAttribute(navToggler, 'aria-expanded', 'false');
+    } else {
+      this.renderer.addClass(navbar, 'show');
+      this.renderer.setAttribute(navToggler, 'aria-expanded', 'true');
+    }
+  }
 }

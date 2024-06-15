@@ -18,12 +18,12 @@ import InitSmoothScroll from './library/invokers/smooth-scroll';
 })
 export class AppComponent implements OnInit {
   constructor(private scrollService: ScrollService,private router: Router) {
-    // The service is initialized here to ensure it starts listening to route changes
+
   }
 
   title = 'almondcoveNg';
   ngOnInit() {
-    initializeNavbarSticky();
+
     initializeThemeSwitcher();
   
     initializeBindedContentToggle();

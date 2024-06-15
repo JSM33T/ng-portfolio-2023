@@ -1,0 +1,42 @@
+<!-- Page content -->
+<section class="overflow-hidden">
+    <div class="container pt-5 pb-sm-3 mt-5 mb-2 mb-md-3 mb-lg-4 mb-xxl-5">
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="pt-lg-3 pb-lg-4 pb-2 breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Studio</li>
+            </ol>
+        </nav>
+
+        <!-- Page title -->
+        <h1 class="text-center pb-3 pb-md-4 pb-lg-5 mb-lg-0 mb-xl-2 mb-xxl-4">Studio</h1>
+
+        <!-- src/app/articles/articles.component.html -->
+
+        <div *ngFor="let article of articles" class="row align-items-center pt-xl-2 pb-5 mb-lg-2 mb-xl-3 mb-xxl-4">
+            <div class="col-md-7 col-lg-6 mb-4 mb-md-0">
+              <a class="d-block position-relative" [href]="article.link">
+                <div class="bg-warning rounded-5 position-absolute top-0 start-0 w-100 h-100" data-aos="zoom-in" [attr.data-aos-duration]="article.duration" [attr.data-aos-offset]="article.offset"></div>
+                <img class="d-block position-relative z-2 ms-auto" [src]="article.imageUrl" width="636" alt="Image" data-aos="fade-in" [attr.data-aos-duration]="article.duration" [attr.data-aos-offset]="article.offset">
+              </a>
+            </div>
+            <div class="col-md-5 col-xl-4 offset-lg-1" data-aos="fade-up" [attr.data-aos-duration]="article.duration" [attr.data-aos-offset]="article.offset">
+              <div class="ps-md-3 ps-lg-0">
+                <h2 class="h4 mb-lg-4">{{ article.title }}</h2>
+                <ul class="list-unstyled pb-1 pb-lg-2 mb-3">
+                  <li *ngFor="let bullet of article.bulletPoints" class="d-flex pb-1 mb-2">
+                    <i class="ai-check-alt text-primary fs-4 mt-n1 me-2"></i>
+                    {{ bullet }}
+                  </li>
+                </ul>
+                <a class="btn btn-sm btn-outline-dark rounded-pill" [href]="article.link">Read the full story</a>
+              </div>
+            </div>
+          </div>
+
+
+
+    </div>
+</section>

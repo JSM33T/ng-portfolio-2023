@@ -13,6 +13,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/home/home.module').then((m) => m.HomeModule),
   },
+  {
+    path: 'studio',
+    loadChildren: () =>
+      import('./modules/studio/studio.module').then((m) => m.StudioModule),
+  },
+ 
 ];
 
 @NgModule({
