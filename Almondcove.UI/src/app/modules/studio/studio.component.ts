@@ -5,8 +5,7 @@ import { HttpService } from '../../services/http.service';
 
 @Component({
   selector: 'app-studio',
-  templateUrl: './studio.component.html',
-  styleUrl: './studio.component.css',
+  templateUrl: './studio.component.html'
 })
 export class StudioComponent implements OnInit, OnDestroy {
   articles: any[] = [];
