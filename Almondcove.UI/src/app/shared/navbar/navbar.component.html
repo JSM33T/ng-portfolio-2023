@@ -64,12 +64,13 @@
             <a class="nav-link" routerLink="/" data-bs-toggle="collapse" (click)="toggleNavbar()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" routerLink="/" data-bs-toggle="collapse" >Blog</a>
+            <a class="nav-link" routerLink="/blogs" data-bs-toggle="collapse" (click)="toggleNavbar()" >Blog</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Studio</a>
+          
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle disabled" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Studio</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink="/studio" (click)="toggleNavbar()">Home</a></li>
+              <li><a class="dropdown-item disabled" routerLink="/studio" (click)="toggleNavbar()">Home</a></li>
               <li class="dropdown">
                 <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Music</a>
                 <ul class="dropdown-menu">
@@ -81,14 +82,19 @@
               
               <li><a class="dropdown-item disabled" href="account-settings.html">Settings</a></li>
             </ul>
-          </li>
-          <li class="nav-item" data-bs-toggle="collapse">
-            <a class="nav-link " routerLink="/about/contact" (click)="toggleNavbar()">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/about" (click)="toggleNavbar()">About</a>
+          </li> -->
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Site</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/about" (click)="toggleNavbar()">About</a></li>
+              <li><a class="dropdown-item" routerLink="/about/contact" (click)="toggleNavbar()">Contact</a></li>
+              <li><a class="dropdown-item disabled">FAQ</a></li>
+            </ul>
           </li>
 
+
+       
           <!-- User signed in state. Account dropdown on screens > 576px -->
           <li class="nav-item dropdown d-sm-none border-top mt-2 pt-2">
             <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">

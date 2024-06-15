@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StudioComponent } from './studio.component';
+import { BrowserComponent } from './browser/browser.component';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ViewerComponent } from './viewer/viewer.component';
 
 const routes: Routes = [
-  { path: '', component: StudioComponent }
+  { path: '', component: BrowserComponent }
 ];
+
 
 
 @NgModule({
   declarations: [
-    StudioComponent
+    BrowserComponent,
+    ViewerComponent
   ],
   imports: [
     CommonModule,
-    HttpClientModule,
     RouterModule.forChild(routes)
   ]
 })
-export class StudioModule { }
+export class BlogModule { }

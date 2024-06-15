@@ -1,0 +1,108 @@
+<!-- Customizer offcanvas -->
+<div class="offcanvas offcanvas-end" id="customizer" data-bs-scroll="true" tabindex="-1">
+	<div class="offcanvas-header border-bottom">
+		<h4 class="offcanvas-title">Customize theme</h4>
+		<button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+	<div class="offcanvas-body">
+		<div class="d-flex align-items-center mb-3"><i class="ai-align-left text-body-secondary fs-4 me-2"></i>
+			<h5 class="mb-0">Typography <span class="text-body-secondary fs-sm fw-normal">(1rem = 16px)</span></h5>
+		</div>
+		<div class="mb-5">
+			<div class="mb-3">
+				<label class="text-dark fs-sm fw-medium pt-1 mb-2" for="font-url">Google font URL</label>
+				<input class="form-control" type="url"
+					value="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+					id="font-url">
+			</div>
+			<div class="mb-3">
+				<label class="text-dark fs-sm fw-medium pt-1 mb-2" for="body-font-family">Font family</label>
+				<input class="form-control" type="text" value="'Inter', sans-serif" id="body-font-family">
+			</div>
+			<div class="row row-cols-2">
+				<div class="col mb-3">
+					<label class="d-flex w-100 text-dark fs-sm fw-medium pt-1 mb-2" for="root-font-size">Root font size,
+						rem</label>
+					<select class="form-select" id="root-font-size">
+						<option value=".75rem">.75</option>
+						<option value=".875rem">.875</option>
+						<option value="1rem" selected>1</option>
+						<option value="1.05rem">1.05</option>
+						<option value="1.1rem">1.1</option>
+						<option value="1.15rem">1.15</option>
+						<option value="1.25rem">1.25</option>
+						<option value="1.375rem">1.375</option>
+					</select>
+				</div>
+				<div class="col mb-3">
+					<label class="d-flex w-100 text-dark fs-sm fw-medium pt-1 mb-2" for="body-font-size">Body font size,
+						rem</label>
+					<select class="form-select" id="body-font-size">
+						<option value=".75rem">.75</option>
+						<option value=".875rem">.875</option>
+						<option value="1rem" selected>1</option>
+						<option value="1.15rem">1.15</option>
+						<option value="1.25rem">1.25</option>
+						<option value="1.375rem">1.375</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex align-items-center mt-n2 mb-3"><i class="ai-maximize text-body-secondary fs-5 me-2"></i>
+			<h5 class="mb-0">Borders / Rounding</h5>
+		</div>
+		<div class="mb-3">
+			<label class="d-flex w-100 text-dark fs-sm fw-medium pt-1 mb-2" for="border-width">Border width, px</label>
+			<input class="form-control" type="number" min="0" step="1" value="1" id="border-width">
+		</div>
+		<div class="mb-3">
+			<label class="d-flex w-100 text-dark fs-sm fw-medium pt-1 mb-2" for="border-radius">Rounded base,
+				rem</label>
+			<input class="form-control" type="number" min="0" step=".05" value="1" id="border-radius">
+		</div>
+		<div id="theme-border-radiuses">
+			<div class="mb-3">
+				<label class="d-flex w-100 text-dark fs-sm fw-medium pt-1 mb-2" for="border-radius-sm">
+					Rounded SM<span class="text-body-secondary fw-normal ms-1"> = Rounded base multiplied
+						by</span></label>
+				<input class="form-control" type="number" min="0" step=".05" value=".75" id="border-radius-sm">
+			</div>
+			<div class="mb-3">
+				<label class="d-flex w-100 text-dark fs-sm fw-medium pt-1 mb-2" for="border-radius-lg">
+					Rounded LG<span class="text-body-secondary fw-normal ms-1"> = Rounded base multiplied
+						by</span></label>
+				<input class="form-control" type="number" min="0" step=".05" value="1.125" id="border-radius-lg">
+			</div>
+			<div class="mb-3">
+				<label class="d-flex w-100 text-dark fs-sm fw-medium pt-1 mb-2" for="border-radius-xl">
+					Rounded XL<span class="text-body-secondary fw-normal ms-1"> = Rounded base multiplied
+						by</span></label>
+				<input class="form-control" type="number" min="0" step=".05" value="1.5" id="border-radius-xl">
+			</div>
+			<div class="mb-3">
+				<label class="d-flex w-100 text-dark fs-sm fw-medium pt-1 mb-2" for="border-radius-xxl">
+					Rounded 2XL<span class="text-body-secondary fw-normal ms-1"> = Rounded base multiplied
+						by</span></label>
+				<input class="form-control" type="number" min="0" step=".05" value="2.25" id="border-radius-xxl">
+			</div>
+		</div>
+	</div>
+	<div class="offcanvas-header border-top d-none" id="customizer-btns">
+		<button class="btn btn-secondary w-100 me-3" type="button" id="customizer-reset-btn">
+			<i class="ai-undo fs-lg me-2 ms-n1"></i>
+			Reset
+		</button>
+		<button class="btn btn-primary w-100" type="button" data-bs-toggle="modal" data-bs-target="#customizer-modal">
+			<i class="ai-code-curly fs-lg me-2 ms-n1"></i>
+			Show styles
+		</button>
+	</div>
+</div>
+
+<!-- Customizer toggler -->
+<a class="position-fixed top-50 bg-light text-dark fw-medium border rounded-pill shadow text-decoration-none"
+	href="#customizer" data-bs-toggle="offcanvas"
+	style="right: -1.75rem; margin-top: -1rem; padding: .25rem .75rem; transform: rotate(-90deg); font-size: calc(var(--ar-body-font-size) * .8125); letter-spacing: .075rem; z-index: 1030;">
+	<i class="ai-settings text-primary fs-base me-1 ms-n1"></i>
+	Customize
+</a>

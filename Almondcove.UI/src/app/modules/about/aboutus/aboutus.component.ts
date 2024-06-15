@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import InitAnimateOnScroll from '../../../library/invokers/animate-on-scroll';
 import InitSmoothScroll from '../../../library/invokers/smooth-scroll';
 import initParallax from '../../../library/invokers/parallax';
+import { LoadingBarService } from '@ngx-loading-bar/core';
 
 @Component({
   selector: 'app-aboutus',
@@ -9,10 +10,17 @@ import initParallax from '../../../library/invokers/parallax';
   styleUrl: './aboutus.component.css'
 })
 export class AboutusComponent implements OnInit{
+
+  loadingBarState : any;
+  constructor(private loadingBar: LoadingBarService){}
   ngOnInit(): void {
+    this.loadingBarState = this.loadingBar.useRef();
+    
+    this.loadingBarState.start();
     InitAnimateOnScroll();
     InitSmoothScroll();
     initParallax();
+    this.loadingBarState.complete();
   }
 
   socialLinks = [
@@ -20,5 +28,6 @@ export class AboutusComponent implements OnInit{
     { platform: 'Facebook', icon: 'ai-facebook', url: 'https://facebook.com/iamjsm33t' },
     { platform: 'YouTube', icon: 'ai-github', url: 'https://github.com/jsm33t' }
   ];
+  
 
 }

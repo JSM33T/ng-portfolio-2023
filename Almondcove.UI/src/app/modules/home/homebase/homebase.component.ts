@@ -4,8 +4,8 @@ import InitSmoothScroll from '../../../library/invokers/smooth-scroll';
 import InitAnimateOnScroll from '../../../library/invokers/animate-on-scroll';
 import initParallax from '../../../library/invokers/parallax';
 import Initswiper from '../../../library/invokers/swiper';
-import { initializeBindedContentToggle } from '../../../library/invokers/content-toggle';
 import InitLightGallery from '../../../library/invokers/light-gallery';
+import { LoadingBarService } from '@ngx-loading-bar/core';
 
 
 @Component({
@@ -14,14 +14,18 @@ import InitLightGallery from '../../../library/invokers/light-gallery';
   styleUrl: './homebase.component.css'
 })
 export class HomebaseComponent implements OnInit{
+  loadingBarState: any;
 
-  constructor() {}
+  constructor( private loadingBar: LoadingBarService) {}
   ngOnInit(): void {
+    this.loadingBarState = this.loadingBar.useRef();
+    this.loadingBarState.start();
     InitSmoothScroll();
     InitAnimateOnScroll();
     initParallax();
     Initswiper();
     InitLightGallery();
+    this.loadingBarState.complete();
   }
 
  

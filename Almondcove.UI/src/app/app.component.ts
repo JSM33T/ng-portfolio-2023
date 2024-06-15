@@ -5,11 +5,13 @@ import { initializeNavbarToggle } from './library/invokers/navbar-toggle';
 import { initializeScrollToTop } from './library/invokers/back-to-top';
 import { initializeBindedContentToggle } from './library/invokers/content-toggle';
 import { ScrollService } from './services/scrollinit.service.spec';
-import { NavigationStart,Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import InitAnimateOnScroll from './library/invokers/animate-on-scroll';
 import initParallax from './library/invokers/parallax';
 import InitSmoothScroll from './library/invokers/smooth-scroll';
+import { LoadingBarService } from '@ngx-loading-bar/core';
+
 
 @Component({
   selector: 'app-root',
@@ -17,28 +19,36 @@ import InitSmoothScroll from './library/invokers/smooth-scroll';
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-  constructor(private scrollService: ScrollService,private router: Router) {
-
-  }
+  constructor(
+    
+    private router: Router,
+  ) {}
 
   title = 'almondcoveNg';
+
   ngOnInit() {
-
     initializeThemeSwitcher();
-  
     initializeBindedContentToggle();
-    
-    
 
-    this.router.events.pipe(
-      filter((event) => event instanceof NavigationStart)
-    ).subscribe((event) => {
-      InitSmoothScroll();
-      InitAnimateOnScroll();
-      initializeScrollToTop();
-      initParallax();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationStart))
+      .subscribe((event) => {
+        InitSmoothScroll();
+        InitAnimateOnScroll();
+        initializeScrollToTop();
+        initParallax();
+     //   hideOffcanvas();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
   }
-
 }
+
+function hideOffcanvas() {
+  const offcanvasElement = document.getElementById('thisone');
+  if (offcanvasElement) {
+    //@ts-ignore
+    const offcanvasInstance = Offcanvas.getInstance(offcanvasElement) || new Offcanvas(offcanvasElement);
+    offcanvasInstance.hide();
+  }
+}
+

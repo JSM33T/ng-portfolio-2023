@@ -36,12 +36,10 @@
           <div class="col-sm-6">
             <label class="form-label fs-base" for="location">Location</label>
             <select class="form-select form-select-lg" id="location">
-              <option value="All locations">All locations</option>
-              <option value="Asia and Pacific">Asia and Pacific</option>
-              <option value="Central Europe">Central Europe</option>
-              <option value="Eastern Europe">Eastern Europe</option>
-              <option value="North America">North America</option>
-              <option value="South America">South America</option>
+              <option value="All locations">General</option>
+              <option value="Asia and Pacific">Feature Request</option>
+              <option value="Asia and Pacific">Feedback/Report</option>
+
             </select>
           </div>
           <div class="col-sm-12">
@@ -56,7 +54,7 @@
             </div>
           </div>
           <div class="col-sm-12 pt-2">
-            <button class="btn btn-lg btn-primary" type="submit">Send a request</button>
+            <button class="btn btn-lg btn-primary" (click)="haha()" type="button">Send message</button>
           </div>
         </form>
       </div>

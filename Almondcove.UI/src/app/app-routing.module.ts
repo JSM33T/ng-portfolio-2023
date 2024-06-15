@@ -18,6 +18,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/studio/studio.module').then((m) => m.StudioModule),
   },
+  {
+    path: 'blogs',
+    loadChildren: () =>
+      import('./modules/blog/blog.module').then((m) => m.BlogModule),
+  },
  
 ];
 
