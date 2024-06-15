@@ -12,8 +12,8 @@ namespace Almondcove.Base.Controllers
     [Route("api/auth")]
     public class AuthController : ControllerBase
     {
-        private readonly string _clientId = "881148390473-ctplpemr784g2j7e8vf6kh6m2ffd1obq.apps.googleusercontent.com";
-        private readonly string _jwtSecret = "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";
+        private readonly string _clientId = "";
+        private readonly string _jwtSecret = "";
 
         [HttpPost("google")]
         public async Task<IActionResult> GoogleLogin([FromBody] GoogleLoginDto dto)
