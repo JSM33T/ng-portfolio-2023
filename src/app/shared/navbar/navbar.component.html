@@ -64,7 +64,13 @@
             <a class="nav-link" routerLink="/" data-bs-toggle="collapse" (click)="toggleNavbar()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/blogs" data-bs-toggle="collapse" (click)="toggleNavbar()" >Blog</a>
+            <a class="nav-link disabled" routerLink="/studio" data-bs-toggle="collapse" (click)="toggleNavbar()" >Studio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about" data-bs-toggle="collapse" (click)="toggleNavbar()" >About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" routerLink="/about/contact" data-bs-toggle="collapse" (click)="toggleNavbar()" >Contact</a>
           </li>
           
           <!-- <li class="nav-item dropdown">
@@ -85,11 +91,11 @@
           </li> -->
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Site</a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Sites</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink="/about" (click)="toggleNavbar()">About</a></li>
-              <li><a class="dropdown-item" routerLink="/about/contact" (click)="toggleNavbar()">Contact</a></li>
-              <li><a class="dropdown-item" routerLink="/about/faq" >FAQ</a></li>
+              <li><a class="dropdown-item" href="https://laymaann.in" target="_blank">laymaann.in</a></li>
+              <li><a class="dropdown-item" href="https://laymaann.com" target="_blank">laymaann.in</a></li>
+              <li><a class="dropdown-item" href="https://assambrew.com" target="_blank">assambrew.in</a></li>
             </ul>
           </li>
 
