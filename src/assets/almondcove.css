@@ -1,5 +1,7 @@
 .ngx-bar {
     background-color: var(--ar-primary) !important;
+    height: 0px !important;
+    
 }
 
 .ngx-spinner {

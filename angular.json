@@ -44,9 +44,9 @@
               
             ],
             "styles": [
-              "src/styles.css",
+              "src/assets/styles.css",
               "src/assets/icons/around-icons.min.css",
-              "src/almondcove.css"
+              "src/assets/almondcove.css"
             ],
             "scripts": []
           },

@@ -10,7 +10,7 @@ import { filter } from 'rxjs';
 import InitAnimateOnScroll from './library/invokers/animate-on-scroll';
 import initParallax from './library/invokers/parallax';
 import InitSmoothScroll from './library/invokers/smooth-scroll';
-import { LoadingBarService } from '@ngx-loading-bar/core';
+
 
 
 @Component({

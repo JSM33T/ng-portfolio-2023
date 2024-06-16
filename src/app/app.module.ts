@@ -7,12 +7,14 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { SidepanelComponent } from './shared/sidepanel/sidepanel.component';
+import { AboutComponent } from './modules/about.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    AboutComponent,
     SidepanelComponent
   ],
   imports: [
