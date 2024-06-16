@@ -1,0 +1,42 @@
+<section class="container py-5 mt-5 mb-md-2 mb-lg-3 mb-xl-4">
+
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+      <ol class="pt-lg-3 pb-lg-4 pb-2 breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item"><a routerLink="/blogs">Blog</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Single post v.2</li>
+      </ol>
+    </nav>
+
+    <!-- Post title + post meta -->
+    <h1 class="display-4 text-center pb-2 pb-lg-3">How to look for inspiration for new goals in life and remember to give yourself a break?</h1>
+    <div class="d-flex flex-wrap align-items-center justify-content-center mt-n2">
+      <span class="text-body-secondary fs-sm fw-normal p-0 mt-2 me-3">
+        12
+        <i class="ai-share fs-lg ms-1"></i>
+      </span>
+      <a class="nav-link position-relative text-body-secondary fs-sm fw-normal d-flex align-items-end p-0 mt-2" href="#comments" data-scroll data-scroll-offset="60">
+        <span class="position-absolute w-100 h-100 top-0 start-0" data-bs-toggle="collapse" data-bs-target="#commentsCollapse"></span>
+        4
+        <i class="ai-message fs-lg ms-1"></i>
+      </a>
+      <span class="fs-xs opacity-20 mt-2 mx-3">|</span>
+      <span class="fs-sm text-body-secondary mt-2">16 hours ago</span>
+      <span class="fs-xs opacity-20 mt-2 mx-3">|</span>
+      <a class="badge text-nav fs-xs border mt-2" href="#">Inspiration</a>
+    </div>
+  </section>
+
+
+  <!-- Post cover image (parallax) -->
+  <section class="jarallax" data-jarallax data-speed=".65">
+    <div class="jarallax-img bg-position-center-y" style="background-image: url(https://images.pexels.com/photos/25358063/pexels-photo-25358063/free-photo-of-singapore-flyer.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);"></div>
+    <div class="d-none d-xxl-block" style="height: 760px;"></div>
+    <div class="d-none d-xl-block d-xxl-none" style="height: 650px;"></div>
+    <div class="d-none d-lg-block d-xl-none" style="height: 500px;"></div>
+    <div class="d-none d-md-block d-lg-none" style="height: 400px;"></div>
+    <div class="d-md-none" style="height: 300px;"></div>
+  </section>
+
+<div [innerHTML]="htmlContent"></div>

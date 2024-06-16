@@ -1,2 +1,0 @@
-# Almondcove.Docs
-docs 
