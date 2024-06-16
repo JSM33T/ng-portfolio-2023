@@ -11,11 +11,7 @@
   background-color: currentColor;
 }
 
-.text-gradient {
-  background: linear-gradient(90.72deg, #cbfdb1 3.49%, #acbff1 50.67%, #efa7ec 100.79%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 [class^=rounded-].overflow-hidden,
 [class*=" rounded-"].overflow-hidden {

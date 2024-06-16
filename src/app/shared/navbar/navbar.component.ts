@@ -4,10 +4,14 @@ import InitAnimateOnScroll from '../../library/invokers/animate-on-scroll';
 
 @Component({
   selector: 'app-navbar',
-  templateUrl: './navbar.component.html'
+  templateUrl: './navbar.component.html',
+  styles:`@import 'aos/dist/aos.css';`
 })
-export class NavbarComponent  {
+export class NavbarComponent implements OnInit{
   constructor(private el: ElementRef, private renderer: Renderer2) {}
+  ngOnInit(): void {
+    InitAnimateOnScroll();
+  }
 
  
   toggleNavbar() {

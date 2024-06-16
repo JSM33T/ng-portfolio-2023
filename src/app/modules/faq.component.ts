@@ -1,5 +1,20 @@
-  <!-- FAQ (Accordion) -->
-  <section class="bg-secondary py-5">
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import InitAnimateOnScroll from '../library/invokers/animate-on-scroll';
+import InitSmoothScroll from '../library/invokers/smooth-scroll';
+
+interface FAQItem {
+  id: string;
+  heading: string;
+  question: string;
+  answer: string;
+  expanded: boolean;
+}
+
+@Component({
+  selector: 'app-faq',
+  template:`
+    <!-- FAQ (Accordion) -->
+    <section class="bg-secondary py-5">
     <div class="container py-md-2 py-lg-3 py-xl-5 my-2 my-sm-3 my-md-4 my-xxl-5">
       <div class="row">
         <div class="col-md-4 text-center text-md-start" data-aos="fade-in" data-aos-duration="700" data-aos-delay="200" data-aos-offset="0" >
@@ -27,7 +42,7 @@
                   </h3>
                   <div
                     class="accordion-collapse collapse"
-                    [ngClass]="{'show': faq.expanded}"
+                     [class.show]="faq.expanded"
                     [attr.id]="faq.id"
                     [attr.aria-labelledby]="faq.heading"
                     data-bs-parent="#faq">
@@ -42,4 +57,38 @@
       </div>
     </div>
   </section>
+`,
+  styles:`@import 'aos/dist/aos.css';`
+})
+export class FaqComponent implements OnInit,AfterViewInit {
+  faqs: FAQItem[] = [
+    {
+      id: 'questionOne',
+      heading: 'headingOne',
+      question: 'Is there a free trial?',
+      answer: 'Adipiscing sagittis neque egestas id platea accumsan. Morbi inpa platea urna curabitur habitant pulvinar lacinia neque. Netus gravida amet, aliquam quam turpis aliquet cras. Find aute irure dolor in reprehenderit voluptate velit esse cillum dolore eu nulla pariatur. Sit amet, adipiscing elit.',
+      expanded: true
+    },
+    {
+      id: 'questionTwo',
+      heading: 'headingTwo',
+      question: 'How do refunds work?',
+      answer: 'Quisque rutrum sit amet magna sit amet tristique. Vivamus rhoncus ac purus vitae convallis. Aliquam erat volutpat. Proin egestas, mauris ut semper semper, ipsum felis mattis ligula, et porttitor ante arcu nec ante. Aliquam congue est eu turpis sollicitudin, et ullamcorper tortor aliquam.',
+      expanded: false
+    }
+  ];
+
+  constructor() {}
+  ngOnInit(): void {
+    console.log('ONINIT CALLED');
+  }
   
+  ngAfterViewInit(): void {
+    console.log('AFTERVIEWINIT CALLED');
+    
+    InitSmoothScroll();
+    InitAnimateOnScroll();
+  }
+
+  
+}
