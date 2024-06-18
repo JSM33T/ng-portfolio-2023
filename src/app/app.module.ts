@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { SidepanelComponent } from './shared/sidepanel/sidepanel.component';
 import { AboutComponent } from './modules/about.component';
+import { HomeComponent } from './modules/home.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AboutComponent } from './modules/about.component';
     AppComponent,
     NavbarComponent,
     AboutComponent,
+    HomeComponent,
     SidepanelComponent
   ],
   imports: [
